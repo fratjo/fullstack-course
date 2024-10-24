@@ -1,0 +1,17 @@
+<h2>List of Country :</h2>
+@if (countries$ | async; as countries) {
+<div>
+  @for (country of countries; track $index) {
+  <app-country-card
+    [country]="country"
+    (save)="saveCountry($event)"
+    (delete)="deleteCountry($event)"
+  ></app-country-card>
+  }
+  <div>
+    <input [(ngModel)]="newName" placeholder="Name..." />
+    <input [(ngModel)]="newShort" placeholder="Short..." />
+    <button (click)="addCountry()">Add</button>
+  </div>
+</div>
+}

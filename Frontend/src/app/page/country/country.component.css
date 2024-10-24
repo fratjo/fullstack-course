@@ -1,0 +1,21 @@
+div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+div app-country-card {
+  height: 30px;
+}
+
+div app-country-card:nth-child(odd) {
+  background-color: #f0f0f0;
+}

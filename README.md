@@ -1,2 +1,1 @@
-# COURSE-BACKEND
-# fullstack-course
+# Fullstack-course

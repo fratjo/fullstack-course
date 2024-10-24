@@ -1,0 +1,122 @@
+# ASP.NET Configuration files
+*/appsettings.Development.json
+*/appsettings.Local.json
+*/appsettings.*.json
+*/appsettings.json
+
+# Visual Studio
+.vscode/
+.vs/
+.vscode/
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# Auto-generated VS files
+*.sln.docstates
+*_i.c
+*_p.c
+*_auto.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+
+# Build Results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Bb]in/*
+[Oo]bj/
+[Oo]bj/*
+[Ll]og/
+[Ll]ogs/
+
+# DotNet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.cache
+*.ide/
+
+# NuGet
+*.nupkg
+*.snupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+
+# Backup & report files from converting an old project file
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# IIS
+# IIS Generated Files
+# ex: IIS local cache, ASP.NET temporary files, etc.
+**/[Tt]emporary[Aa]sp.NET[Ff]iles/
+**/[Dd]ata/[Tt]emp/
+
+# Others
+ClientBin/
+~$*
+*~.tmp
+*.tmp
+*.bak
+*.old
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Optional for ASP.NET Core
+wwwroot/
+node_modules/
+
+# Optional for web projects
+client/node_modules/
+
+# Logs
+logs/
+*.log
