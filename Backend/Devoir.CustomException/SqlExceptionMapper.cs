@@ -3,7 +3,7 @@ using Devoir.Repositories.Errors;
 
 namespace Devoir.CustomException;
 
-public static class ExceptionMapper
+public static class SqlExceptionMapper
 {
     public static BaseApplicationException MapToApplicationException(this Exception ex)
     {

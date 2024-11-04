@@ -30,7 +30,7 @@ public class ValidationExceptionHandler : IExceptionHandler
     public IActionResult Handle(Exception exception, ControllerBase controller)
     {
         var validationException = exception as ValidationException;
-        return controller.BadRequest(new { message = validationException.Message });
+        return controller.BadRequest(new { message = validationException!.Message });
     }
 }
 
@@ -45,7 +45,7 @@ public class NotFoundExceptionHandler : IExceptionHandler
     public IActionResult Handle(Exception exception, ControllerBase controller)
     {
         var notFoundException = exception as NotFoundException;
-        return controller.NotFound(new { message = notFoundException.Message });
+        return controller.NotFound(new { message = notFoundException!.Message });
     }
 }
 
