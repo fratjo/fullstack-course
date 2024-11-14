@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Register the CountryRepository and CountryService
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 builder.Services.AddScoped<ISqlConnectionFactory, SqlConnectionFactory>(_ =>
 {
     if (connectionString != null) return new SqlConnectionFactory(connectionString);
