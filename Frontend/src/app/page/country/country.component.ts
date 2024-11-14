@@ -1,4 +1,4 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CountryService } from '../../service/country.service';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,16 +13,14 @@ import { CountryCardComponent } from './country-card/country-card.component';
   templateUrl: './country.component.html',
   styleUrl: './country.component.css',
 })
-export class CountryComponent implements OnInit, OnDestroy {
+export class CountryComponent implements OnInit {
   private readonly countryService: CountryService = inject(CountryService);
-  private subscription: any;
   countries$: Observable<Country[]> = this.countryService.countries$;
   newName: string = '';
   newShort: string = '';
 
   ngOnInit(): void {
-    // Fetch the countries
-    this.subscription = this.countryService.fetchCountries();
+    this.countryService.fetchCountries();
   }
 
   addCountry(): void {
@@ -60,9 +58,5 @@ export class CountryComponent implements OnInit, OnDestroy {
 
   capitaliseFirstLetter(word: string): string {
     return word.charAt(0).toUpperCase() + word.slice(1);
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
   }
 }
